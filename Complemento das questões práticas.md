@@ -169,6 +169,14 @@ Algorthm _RecursiveBinarySearch(A[0..n − 1], l, r, K)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
 <p align="justify">
+Relação de recorrência: G(n) = G(n/2) + 1
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
+  
+Portanto, crescimento logarítmico
+</p>
+
+<p align="justify">
 8)	Este algoritmo funciona em duas etapas. A etapa de particionamento escolhe um elemento pivô e, em seguida, reorganiza os elementos da matriz de modo que tudo o que for menor que o pivô fique a esquerda; tudo que for maior que o pivô fique a direita; e o pivô esteja no lugar correto. Para encontrar medianas, basicamente, deve-se chamar recursivamente a função de partição, até que o pivô alcance a posição N / 2. Obs: Usando o algoritmo de seleção, é possível encontrar qualquer K-ésimo menor elemento.
 </p>
 
@@ -191,6 +199,14 @@ Algorthm _Quickselect(A[0..n − 1], l, r, k)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** s = k - 1 **return** A[s]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** s < k quickselect(A, s + 1, r, k)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** quickselect(A, l, s - 1, k)
+
+<p align="justify">
+Relação de recorrência: G(n) = G(n/2) + n
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = 2n
+  
+Portanto, crescimento linear
+</p>
 
 <p align="justify">
 9)	Uma árvore de pesquisa binária (BST) é definida como uma árvore binária baseada em nós que possui as seguintes propriedades:  
@@ -232,3 +248,11 @@ Algorthm _Search Tree (root, key)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **or** root.data = key **return** root  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root.data < key  **return** Search Tree (root.right, key)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Search(root.left, key)  
+
+<p align="justify">
+Relação de recorrência: G(n) = G(n/2) + 1
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
+  
+Portanto, crescimento logarítmico
+</p>
