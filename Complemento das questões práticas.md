@@ -23,6 +23,16 @@ Algorthm _Insertion Sort (A[0...n-1])_
 </p>
 
 <p align="justify">
+A operação básica é o while, executado n - 1 vezes
+
+Solução:
+Pior caso: G(n) = n<sup>2</sup>
+Caso médio: G(n) = n
+
+Portanto, crescimento quadrático no pior caso e linear para casos médios.
+</p>
+
+<p align="justify">
 2)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:
 </p>
 
@@ -58,6 +68,14 @@ Algorthm _JohnsonTrotter(n)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione a nova permutação à lista  
 
 <p align="justify">
+O primeiro laço de repetição domina assintoticamente os demais
+
+Solução: G(n) = n!
+
+Portanto, crescimento fatorial.
+</p>
+
+<p align="justify">
 3)	Imprime todas as permutações ordenadas de forma crescente (lexicográfica). Aplicando o Insertion sort a saída do algoritmo Johnson-Trotter, obtém-se uma solução para o Lexicographic Permute com o mesmo custo do livro O(n<sup>2</sup>xn!). Aplicando outros algoritmos de ordenação, seu custo pode ser otimizado para O(nxn!).
 </p>
 
@@ -85,6 +103,14 @@ Algorthm _BRGC(n)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** L
 
 <p align="justify">
+A recursão diminui o tamanho em 1
+
+Solução: G(n) = 2<sup>n</sup> - 1
+
+Portanto, crescimento exponencial
+</p>
+
+<p align="justify">
 5)	A Binary Search pesquisa um array ordenado dividindo repetidamente o intervalo da pesquisa pela metade. Comece com um intervalo cobrindo todo o array. Se o valor da chave for menor que o item no meio do intervalo, restrinja o intervalo à metade inferior. Caso contrário, estreite-o para a metade superior. Verifique repetidamente até que o valor seja encontrado ou o intervalo esteja vazio. Exemplo :
 </p>
 
@@ -103,11 +129,27 @@ Algorthm _BinarySearch(A[0..n − 1], K)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
 <p align="justify">
+Relação de recorrência: G(n) = G(n/2) + 1
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
+  
+Portanto, crescimento logarítmico
+</p>
+
+<p align="justify">
 6)	Interpolation Search é um aprimoramento da Binary Search. A Binary Search sempre vai para o elemento do meio para verificar. Por outro lado, a Interpolation Search pode ir para locais diferentes de acordo com o valor da chave que está sendo pesquisada. O algoritmo imita a maneira como procuramos por um nome em uma lista telefônica: se estivermos procurando por alguém chamado Brown, abrimos o livro não no meio, mas muito perto do início, ao contrário da nossa ação ao procurar alguém chamado, Smith. A posição é calculada da seginte forma:
 </p>
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;pos=l+\frac{(x-arr[l])(r-l)}{arr[r]-arr[l]}">
+</p>
+
+<p align="justify">
+Relação de recorrência: G(n) = G(n/2) + 1
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
+  
+Portanto, crescimento logarítmico
 </p>
 
 <p align="justify">
